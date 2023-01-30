@@ -21,10 +21,14 @@
         function criaBotaoApagar(li){
             li.innerHTML += ' '; 
             const botaoApagar = document.createElement('button');
+            const icon = document.createElement('i');
             botaoApagar.innerText = 'Apagar';
-            botaoApagar.setAttribute('class','apagar');
+            botaoApagar.setAttribute('class','apagar btn btn-3 btn-sep');
             botaoApagar.setAttribute('title','Apagar esse texto');
+            icon.setAttribute('class', 'fa fa-trash');
             li.appendChild(botaoApagar);
+            botaoApagar.appendChild(icon);
+
         }
         function criaTarefa(textoInput){
             const li =criaLi();

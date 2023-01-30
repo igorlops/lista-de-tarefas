@@ -1,41 +1,180 @@
- *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Helvetica';
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Helvetica';
+ }
+
+ body {
+     background: rgb(10, 90, 77);
+     background-image: url('./images/loja.jpg');
+     background-size: cover;
+ }
+
+ section.container::-webkit-scrollbar {
+     width: 12px;
+     /* width of the entire scrollbar */
+ }
+
+ section.container::-webkit-scrollbar-track {
+     background: #fff;
+     /* color of the tracking area */
+ }
+
+ section.container::-webkit-scrollbar-thumb {
+     background-color: #000000;
+     /* color of the scroll thumb */
+     border-radius: 20px;
+
+     /* roundness of the scroll thumb */
+     border: 3px solid #ffffff 
+ }
+ section.container {
+         background-color: rgba(255, 255, 255, 0.6);
+         max-width: 600px;
+         max-height: 500px;
+         height: auto;
+         padding: 5%;
+         margin: 100px auto;
+         border-radius: 20px;
+         font-weight: bold;
+         overflow-y: scroll;
+     }
+
+     section.container h1 {
+         margin-bottom: 10px;
+         font-size: 30px;
+         border-bottom: 1px solid #ccc;
+     }
+
+     section.container p {
+
+         margin-top: 20px;
+     }
+
+     input.input-tarefa {
+         font-size: 15px;
+         padding: 2%;
+     }
+
+     .btn {
+        font-size: inherit;
+        color: inherit;
+        background: none;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: bold;
+        outline: none;
+        position: relative;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      
+      .btn:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      
+      /* Pseudo elements for icons */
+      .btn:before {
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        position: relative;
+      }
+      .btn-sep {
+        padding: 10px 20px 10px 20px;
+      }
+      
+      .btn-sep:before {
+        background: rgba(0,0,0,0.15);
+      }
+
+      .btn-2 {
+        background: #0cb351;
+        color: #fff;
+      }
+      
+      .btn-2:hover {
+        opacity: 0.8;      
+    }
+      
+      .btn-2:active {
+        background: #27ae60;
+        top: 2px;
+      }
+      
+      .btn-2:before {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        line-height: 3;
+        font-size: 140%;
+        width: 5dfsd0px;
+      }
+
+      .btn > i.fa {
+        margin-right:10px ;
+      }
+      .btn-3 {
+        background: #e74c3c;
+        color: #fff;
+      }
+      
+      .btn-3:hover {
+        background: #c0392b;
+      }
+      
+      .btn-3:active {
+        background: #c0392b;
+        top: 2px;
+      }
+      
+      .btn-3:before {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        font-size: 140%;
+        width: 60px;
+      }
+      .apagar{
+        text-align: start;
+        margin-right: 5px;
+      }
+      .apagar > i {
+        margin-left: 10px;
+      }
+      button{
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+      }
+      
+    
+     .tarefas {
+         display: flex;
+         justify-content: space-around;
+         flex-wrap: wrap;
+         flex-direction: row;
+
+     }
+
+     ul.tarefas>li {
+         list-style-type: none;
+         width: 50%;
+        margin-top: 10px;
         }
-        body{
-            background: rgb(10, 90, 77);
-        }
-        section.container{
-            background-color: white;
-            max-width: 600px;
-            height: auto;
-            padding: 5%;
-            margin: 100px auto;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-        section.container h1{
-            margin-bottom:10px;
-            font-size: 30px;
-            border-bottom: 1px solid #ccc;
-        }
-        section.container p{
-           
-           margin-top: 20px;
-        }
-        input.input-tarefa{
-            font-size: 15px;
-            padding: 2%;
-        }
-        button{
-            background-color: rgb(10, 90, 77);
-            color: white;
-            cursor: pointer;
-            font-size: 15px;
-            padding: 2%;
-            border-radius: 10px;
-            margin-top: 10px;
-            border: none;
-        }
+
+     ul.tarefas button {
+         padding: 6px;
+
+     }
